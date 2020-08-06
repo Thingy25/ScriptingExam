@@ -10,6 +10,7 @@ namespace ScriptingExam
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
