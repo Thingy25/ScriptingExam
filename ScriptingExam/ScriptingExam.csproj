@@ -43,11 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Utilities.cs" />
+    <Compile Include="AttackSkill.cs" />
+    <Compile Include="Battleground.cs" />
     <Compile Include="Critter.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Skill.cs" />
+    <Compile Include="SupportSkill.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
