@@ -10,7 +10,6 @@ namespace ScriptingExam
 
     public abstract class Skill
     {
-        public Critter critt;
         public string Name { get; protected set; }
         public Affinities affinity;
         //public SkillType skType;
@@ -21,15 +20,14 @@ namespace ScriptingExam
 
         }
 
-        protected Skill(string name, Affinities affinity, float power, Critter critt)
+        protected Skill(string name, Affinities affinity, float power)
         {
             Name = name;
             this.affinity = affinity;
             Power = power;
-            this.critt = critt;
         }
 
-        public virtual void UseSkill()
+        public virtual void UseSkill(Critter ally, Critter enemy)
         {
 
         }

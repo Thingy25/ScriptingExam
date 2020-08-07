@@ -13,5 +13,12 @@ namespace ScriptingExam
             if (power >= 1 && power <= 10) Power = power;
             else Power = 1;
         }
+
+        public override void UseSkill(Critter ally, Critter enemy)
+        {
+            //Utilities.Compare(playerCrit.affin, enemyCrit.affin);
+        }
+
+        
     }
 }

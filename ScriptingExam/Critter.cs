@@ -40,9 +40,9 @@ namespace ScriptingExam
             HP = 100;
         }
 
-        public void AddSupportSkill(string name, Affinities affinity, SupSkillType type)
+        public void AddSupportSkill(string name, SupSkillType type)
         {
-            moveSet.Add(new SupportSkill(name, affinity, type));
+            moveSet.Add(new SupportSkill(name, type));
         }
 
         public void AddAttackSkill(string name, Affinities affinity, float power)
@@ -50,21 +50,21 @@ namespace ScriptingExam
             moveSet.Add(new AttackSkill(name, affinity, power));
         }
 
-        public void DoDamage(float affinityMultiplier)
-        {
-            float damageValue;
-            string temp;
-            int i;
+        //public void DoDamage(float affinityMultiplier)
+        //{
+        //    float damageValue;
+        //    string temp;
+        //    int i;
 
-            Console.WriteLine("Enter the number for the type of skill you would like to use:");
-            Console.WriteLine("Attack Skill (0), Attack Up (1), Defense Up (2), Speed Down (3)");
-            temp = Console.ReadLine();
-            if(int.TryParse(temp, out i))
-            {
-                moveSet[i].UseSkill();
-                damageValue = (BaseAttack + moveSet[i].Power) * affinityMultiplier;
-            }
-        }
+        //    Console.WriteLine("Enter the number for the type of skill you would like to use:");
+        //    Console.WriteLine("Attack Skill (0), Attack Up (1), Defense Up (2), Speed Down (3)");
+        //    temp = Console.ReadLine();
+        //    if(int.TryParse(temp, out i))
+        //    {
+        //        moveSet[i].UseSkill();
+        //        damageValue = (BaseAttack + moveSet[i].Power) * affinityMultiplier;
+        //    }
+        //}
 
         public void DieSwap()
         {

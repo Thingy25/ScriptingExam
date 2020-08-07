@@ -15,37 +15,37 @@ namespace ScriptingExam
         public float realDefense;
         public float realSpeed;
 
-        public SupportSkill(string name, Affinities affinity, SupSkillType suppSkill)
+        public SupportSkill(string name, SupSkillType suppSkill)
         {
             supportSkill = suppSkill;
             Power = 0;
         }
 
-        public override void UseSkill()
+        public override void UseSkill(Critter ally, Critter enemy)
         {
-            if(critt.attackCounter < 3)
+            if(ally.attackCounter < 3)
             {
                 if (supportSkill == SupSkillType.atkUp)
                 {
-                    realAttack = ((critt.BaseAttack * 20) / 100) + critt.BaseAttack;
+                    realAttack = ((ally.BaseAttack * 20) / 100) + ally.BaseAttack;
                 }
-                critt.attackCounter++;
+                ally.attackCounter++;
             }
-            if(critt.defenseCounter < 3)
+            if(ally.defenseCounter < 3)
             {
                 if (supportSkill == SupSkillType.defUp)
                 {
-                    realDefense = ((critt.BaseDefense * 20) / 100) - critt.BaseDefense;
+                    realDefense = ((ally.BaseDefense * 20) / 100) - ally.BaseDefense;
                 }
-                critt.defenseCounter++;
+               ally.defenseCounter++;
             }
-            if(critt.speedCounter < 3)
+            if(enemy.speedCounter < 3)
             {
                 if (supportSkill == SupSkillType.spdDown)
                 {
-                    realSpeed = critt.BaseSpeed - ((critt.BaseSpeed * 30) / 100);
+                    realSpeed = enemy.BaseSpeed - ((enemy.BaseSpeed * 30) / 100);
                 }
-                critt.speedCounter++;
+                enemy.speedCounter++;
             }
         }
     }
