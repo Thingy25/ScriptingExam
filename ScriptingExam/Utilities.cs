@@ -8,8 +8,6 @@ namespace ScriptingExam
 {
     static public class Utilities
     {
-        //static List<Skill> movesSet = new List<Skill>();
-
         static public float Compare(Affinities player, Affinities enemy)
         {
             float affinityMultiplier = 1.0f;
@@ -241,15 +239,5 @@ namespace ScriptingExam
             }
             return affinityMultiplier;
         }
-
-        //static public void SuppSkillCreation(Affinities affin, Critter crit)
-        //{
-        //    Random rand = new Random();
-
-        //    movesSet.Add(new SupportSkill("Attack Up", affin, SupSkillType.atkUp, crit));
-        //    movesSet.Add(new SupportSkill("Defense Up", affin, SupSkillType.defUp, crit));
-        //    movesSet.Add(new SupportSkill("Speed Down", affin, SupSkillType.spdDown, crit));
-        //    movesSet.Add(new AttackSkill("Attack Skill", affin, rand.Next(1, 11)));
-        //}
     }
 }

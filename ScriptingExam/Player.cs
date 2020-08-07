@@ -8,23 +8,29 @@ namespace ScriptingExam
 {
     class Player
     {
-        public List<Critter> critters = new List<Critter>();
-
-        //public void AddCritter(string name, float baseAttack, float baseDefense, float baseSpeed)
-        //{
-        //    critters.Add(new Critter(name, baseAttack, baseDefense, baseSpeed));
-        //}
+        private List<Critter> critters = new List<Critter>();
+        public List<Critter> Critters { get => critters; }
 
         public void AddCritter(Critter crit)
         {
-            critters.Add(crit);
+            if (Critters.Count < 3)
+            {
+                critters.Add(crit);
+            }
+            else
+            {
+                Console.WriteLine("Critter limit exceeded");
+            }
         }
 
-        public void AddCritter()
+        public void RemoveBattlegroundCritter()
         {
-            Random rand = new Random();
+            critters.RemoveAt(0);
+        }
 
-            critters.Add(new Critter("Critachu", rand.Next(10, 101), rand.Next(10, 101), rand.Next(1, 51)));
+        public void AddCritter(Critter crit, int i) //Se hace sobrecarga para agregar critters muertos ilimitados.
+        {           
+             critters.Add(crit);            
         }
     }
 }
