@@ -12,3 +12,5 @@ Se creó la clase Utilities para verificar afinidades entre criatura y habilidad
 No está contemplado el uso de números distintos a los estipulados al momento de atacar.
 
 Las subclases AttackSkill y SupportSkill fueron creadas para una mayor diferenciación entre la funcionalidad de los tipos de Skill.
+
+Las support skills no poseen affinity debido a que en el enunciado no se especifica si estas hacen daño o no.
